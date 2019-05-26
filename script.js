@@ -54,3 +54,38 @@ Platforma.szer = 150
 Platforma.wys = 10
 Platforma.color = '#002df7'
 Platforma.predk = 30
+
+const render = (ctx, arkanoid) => {
+  const {
+    platforma,
+  } = arkanoid
+  
+  ctx.clearRect(0, 0, szer, wys)
+  platforma.draw(ctx)
+
+  core(arkanoid)
+
+  if (arkanoid.status === 'play') {
+    requestAnimationFrame(() => render(ctx, arkanoid))
+  }
+}
+
+
+window.onload = () => {
+  const canvas = document.getElementById('game')
+  const ctx = canvas.getContext('2d')
+
+  const arkanoid = {
+    platforma: new Platforma(),
+    status: 'play',
+    finish: () => {
+      ctx.font = '50px Arial'
+      ctx.fillStyle = 'red'
+      ctx.textAlign = 'center'
+      ctx.fillText('GAME OVER', szer / 2, wys / 2)
+    },
+  }
+
+  addEventListener('keydown', arkanoid.platforma.ruszPlatforma.bind(arkanoid.platforma))
+  render(ctx, arkanoid)
+}
