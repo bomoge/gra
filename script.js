@@ -32,6 +32,23 @@ class Platforma {
     )
   }
 
+  ruszPlatforma(e) {
+    const modifier = 1
+    switch(e.keyCode) {
+      case 37: {
+        if (this.x > 0) {
+          this.x -= Platforma.predk * modifier
+        }
+        break
+      }
+      case 39: {
+        if (this.x < szer - Platforma.szer) {
+          this.x += Platforma.predk * modifier
+        }
+        break
+      }
+    }
+  }
 }
 Platforma.szer = 150
 Platforma.wys = 10
