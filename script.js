@@ -9,11 +9,16 @@ function restart(){
 	location.reload();	
 }resButton.onclick=restart;
 
+function random(min,max) {
+	var num = Math.floor(Math.random()*(max-min)) + min;	
+	return num;
+}
+
 const szer = 700
 const wys = 600
-const wiersze = 3
-const bloczki = 8
-const przerwa = 3
+const wiersze = 5
+const bloczki = 9
+const przerwa = 2
 const requestAnimationFrame = window.requestAnimationFrame
 
 class Platforma {
@@ -54,6 +59,35 @@ Platforma.szer = 150
 Platforma.wys = 10
 Platforma.color = '#002df7'
 Platforma.predk = 30
+
+class Blok {
+  constructor(x, y) {
+    this.x = x
+    this.y = y
+    this.isAlive = true
+  }
+
+  draw(ctx) {
+    if (!this.isAlive) return
+    ctx.fillStyle = Blok.color
+    ctx.fillRect(
+      this.x,
+      this.y,
+      Blok.width,
+      Blok.height,
+    )
+    ctx.strokeStyle = '#ffffff'
+    ctx.strokeRect(
+      this.x,
+      this.y,
+      Blok.width,
+      Blok.height,
+    )
+  }
+}
+Blok.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+Blok.width = szer / bloczki - 2 * przerwa
+Blok.height = 33
 
 const render = (ctx, arkanoid) => {
   const {
