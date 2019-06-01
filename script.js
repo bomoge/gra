@@ -103,13 +103,24 @@ const tworzBloki = () => {
 }
 
 
+const rysujBloki = (bloki, ctx) => {
+  for (let i = 0; i < wiersze; i++) {
+    for (let j = 0; j < bloczki; j++) {
+      bloki[i][j].draw(ctx)
+    }
+  }
+}
+
+
 const render = (ctx, arkanoid) => {
   const {
     platforma,
+	bloki,
   } = arkanoid
   
   ctx.clearRect(0, 0, szer, wys)
   platforma.draw(ctx)
+  rysujBloki(bloki, ctx)
 
   core(arkanoid)
 
@@ -125,6 +136,7 @@ window.onload = () => {
 
   const arkanoid = {
     platforma: new Platforma(),
+	bloki: tworzBloki(),
     status: 'play',
     finish: () => {
       ctx.font = '50px Arial'
