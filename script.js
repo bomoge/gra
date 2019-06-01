@@ -89,6 +89,20 @@ Blok.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 25
 Blok.width = szer / bloczki - 2 * przerwa
 Blok.height = 33
 
+const tworzBloki = () => {
+  const bloki = []
+  for (let i = 0; i < wiersze; i++) {
+    bloki[i] = []
+    for (let j = 0; j < bloczki; j++) {
+      const x = (2 * j + 1) * przerwa + j * Blok.width
+      const y = (2 * i + 1) * przerwa + i * Blok.height
+      bloki[i][j] = new Blok(x, y)
+    }
+  }
+  return bloki
+}
+
+
 const render = (ctx, arkanoid) => {
   const {
     platforma,
