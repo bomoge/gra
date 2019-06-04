@@ -149,8 +149,23 @@ const core = (arkanoid) => {
     Pilka.predk = -Pilka.predk
     return
   }
-}
 
+  if (pilka.y >= wys - Platforma.wys - Pilka.radius) {
+    if (
+      (pilka.x + (Pilka.radius * 2) >= platforma.x) &&
+      (pilka.x - (Pilka.radius * 2) <= platforma.x + Platforma.szer)
+    ) {
+      const przesun = (platforma.x + (Platforma.szer / 2) - pilka.x) / (Platforma.szer / 2)
+      const wspPrzesun = (przesun / 2) + 0.5
+      pilka.angle = -(wspPrzesun * (Math.PI / 2) + Math.PI / 4)
+      return
+    } else if (pilka.y >= szer - Pilka.radius) {
+      arkanoid.status = 'finish'
+      arkanoid.finish()
+      return
+    }
+  }
+}
 
 const render = (ctx, arkanoid) => {
   const {
@@ -158,7 +173,7 @@ const render = (ctx, arkanoid) => {
     bloki,
 	pilka,	
   } = arkanoid
-  
+
   ctx.clearRect(0, 0, szer, wys)
   rysujBloki(bloki, ctx)
   platforma.draw(ctx)
