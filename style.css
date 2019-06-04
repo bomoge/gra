@@ -1,17 +1,17 @@
 #game {
 	position:absolute;
-	top:15%;
-	left:31.5%;
+	top:20%;
+	left:35%;
 	display: block;
     margin: 0 auto;
     border: 3px solid rgb(0, 0, 0);
  }
 #menu {
 	position: fixed;
-	height: 85%;
-	width: 40%;
-	left: 30%;
-	top: 3%;	
+	height: 60%;
+	width: 35%;
+	left: 32%;
+	top: 15%;	
 	color: white;
 	text-align: center;
 	opacity: 0.8;
@@ -46,6 +46,9 @@ p.gameName{
 	
 }
 .btnSTART {
+	position: absolute;
+	top:85%;
+	left:35%;
 	-moz-box-shadow: 1px 1px 0px 0px #8a2a21;
 	-webkit-box-shadow: 1px 1px 0px 0px #8a2a21;
 	box-shadow: 1px 1px 0px 0px #8a2a21;
@@ -72,6 +75,9 @@ p.gameName{
 	text-shadow:0px 1px 0px #810e05;
 }
 .btnSTART:hover {
+	position: absolute;
+	top:85%;
+	left:35%;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #ff1500));
 	background:-moz-linear-gradient(top, #f24437 5%, #ff1500 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #ff1500 100%);
@@ -82,13 +88,14 @@ p.gameName{
 	background-color:#f24437;
 }
 .btnSTART:active {
-	position:relative;
-	top:1px;
+	position: absolute;
+	top:85%;
+	left:35%;
 }
 #reset {
 	position:fixed;
 	left:41%;
-	top:90%;
+	top:80%;
 	-moz-box-shadow: 1px 1px 0px 0px #8a2a21;
 	-webkit-box-shadow: 1px 1px 0px 0px #8a2a21;
 	box-shadow: 1px 1px 0px 0px #8a2a21;
@@ -117,7 +124,7 @@ p.gameName{
 #reset:hover {
 	position:fixed;
 	left:41%;
-	top:90%;
+	top:80%;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #ff1500));
 	background:-moz-linear-gradient(top, #f24437 5%, #ff1500 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #ff1500 100%);
@@ -129,7 +136,6 @@ p.gameName{
 }
 #reset:active {
 	position:relative;
-	top:1px;
 	left:41%;
-	top:90%;
+	top:80%;
 }

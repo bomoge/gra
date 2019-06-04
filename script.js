@@ -14,8 +14,8 @@ function random(min,max) {
 	var num = Math.floor(Math.random()*(max-min)) + min;	
 	return num;
 }
-const szer = 700
-const wys = 600
+const szer = 550
+const wys = 450
 const wiersze = 5
 const bloczki = 9
 const przerwa = 2
@@ -55,7 +55,7 @@ class Platforma {
     }
   }
 }
-Platforma.szer = 150
+Platforma.szer = 120
 Platforma.wys = 10
 Platforma.color = '#002df7'
 Platforma.predk = 30
