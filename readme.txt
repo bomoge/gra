@@ -1,1 +1,1 @@
-hello
+W grze trzeba zniszczyæ wszystkie bloczki. Sterowanie za pomoc¹ strza³ek lewo, prawo.

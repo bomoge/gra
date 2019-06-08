@@ -55,7 +55,7 @@ class Platforma {
     }
   }
 }
-Platforma.szer = 120
+Platforma.szer = 150
 Platforma.wys = 10
 Platforma.color = '#002df7'
 Platforma.predk = 30
@@ -165,6 +165,30 @@ const core = (arkanoid) => {
       return
     }
   }
+
+  if (
+    (pilka.x <= Pilka.radius) ||
+    (pilka.x >= szer - Pilka.radius)
+  ) {
+    pilka.angle = Math.PI - pilka.angle
+    return
+  }
+
+  for (let bloczkiRzad of bloki) {
+    for (let bloczek of bloczkiRzad) {
+      if (!bloczek.isAlive) continue
+      if (
+        pilka.x - Pilka.radius <= bloczek.x + Blok.szer &&
+        pilka.x + Pilka.radius >= bloczek.x &&
+        pilka.y - Pilka.radius <= bloczek.y + Blok.wys &&
+        pilka.y + Pilka.radius >= bloczek.y
+      ) {
+        bloczek.isAlive = false
+        pilka.angle *= -1
+        return
+      }
+    }
+  }
 }
 
 const render = (ctx, arkanoid) => {
@@ -173,6 +197,9 @@ const render = (ctx, arkanoid) => {
     bloki,
 	pilka,	
   } = arkanoid
+
+  pilka.y += (Pilka.predk * Math.sin(pilka.angle))
+  pilka.x += (Pilka.predk * Math.cos(pilka.angle))
 
   ctx.clearRect(0, 0, szer, wys)
   rysujBloki(bloki, ctx)
@@ -196,7 +223,7 @@ btnSTART.onclick = () => {
 	pilka: new Pilka(),
     status: 'play',
     finish: () => {
-      ctx.font = 'bold 70px Arial'
+      ctx.font = 'bold 40px Arial'
       ctx.fillStyle = 'red'
       ctx.textAlign = 'center'
       ctx.fillText('G A M E    O V E R !', szer / 2, wys / 2)

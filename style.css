@@ -1,17 +1,33 @@
+#background{
+	position:absolute;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:100%;
+	background: rgb(134,78,25);
+	background-image: linear-gradient(to right top, #723a1e, #7a3a1b, #823a17, #8b3a13, #933a0e, #9a3d10, #a14111, #a84413, #af4c1b, #b65423, #bd5b2b, #c46333);
+}
+#box{
+	position:absolute;
+	width:1024px;
+	height:600px;
+	top:0%;
+	left:0%;
+ }
 #game {
 	position:absolute;
-	top:20%;
-	left:35%;
+	top:10%;
+	left:23%;
 	display: block;
     margin: 0 auto;
     border: 3px solid rgb(0, 0, 0);
- }
+ } 
 #menu {
 	position: fixed;
-	height: 60%;
-	width: 35%;
-	left: 32%;
-	top: 15%;	
+	height: 85%;
+	width: 100%;
+	left: 0%;
+	top: 2%;	
 	color: white;
 	text-align: center;
 	opacity: 0.8;
@@ -26,15 +42,7 @@
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
-#background{
-	position:absolute;
-	top:0%;
-	left:0%;
-	width:100%;
-	height:100%;
-	background: rgb(134,78,25);
-	background-image: linear-gradient(to right top, #723a1e, #7a3a1b, #823a17, #8b3a13, #933a0e, #9a3d10, #a14111, #a84413, #af4c1b, #b65423, #bd5b2b, #c46333);
-}
+
 p.gameName{	
 	font-size:45px;
 	color: red;
@@ -46,9 +54,9 @@ p.gameName{
 	
 }
 .btnSTART {
-	position: absolute;
-	top:85%;
-	left:35%;
+	position:absolute;
+	bottom:2%;
+	left:44%;
 	-moz-box-shadow: 1px 1px 0px 0px #8a2a21;
 	-webkit-box-shadow: 1px 1px 0px 0px #8a2a21;
 	box-shadow: 1px 1px 0px 0px #8a2a21;
@@ -68,16 +76,16 @@ p.gameName{
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:50px;
+	font-size:30px;
 	font-weight:bold;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
 .btnSTART:hover {
-	position: absolute;
-	top:85%;
-	left:35%;
+	position:absolute;
+	bottom:2%;
+	left:44%;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #ff1500));
 	background:-moz-linear-gradient(top, #f24437 5%, #ff1500 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #ff1500 100%);
@@ -88,14 +96,14 @@ p.gameName{
 	background-color:#f24437;
 }
 .btnSTART:active {
-	position: absolute;
-	top:85%;
-	left:35%;
+	position:absolute;
+	bottom:2%;
+	left:44%;
 }
-#reset {
-	position:fixed;
+.btnRESET {
+	position:absolute;
 	left:41%;
-	top:80%;
+	bottom:2%;
 	-moz-box-shadow: 1px 1px 0px 0px #8a2a21;
 	-webkit-box-shadow: 1px 1px 0px 0px #8a2a21;
 	box-shadow: 1px 1px 0px 0px #8a2a21;
@@ -115,16 +123,16 @@ p.gameName{
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:50px;
+	font-size:30px;
 	font-weight:bold;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
-#reset:hover {
-	position:fixed;
+.btnRESET:hover {
+	position:absolute;
 	left:41%;
-	top:80%;
+	bottom:2%;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #ff1500));
 	background:-moz-linear-gradient(top, #f24437 5%, #ff1500 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #ff1500 100%);
@@ -134,8 +142,8 @@ p.gameName{
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#ff1500',GradientType=0);
 	background-color:#f24437;
 }
-#reset:active {
-	position:relative;
+.btnRESET:active {
+	position:absolute;
 	left:41%;
-	top:80%;
+	bottom:2%;
 }
