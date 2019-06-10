@@ -17,7 +17,7 @@
 #game {
 	position:absolute;
 	top:10%;
-	left:23%;
+	left:33%;
 	display: block;
     margin: 0 auto;
     border: 3px solid rgb(0, 0, 0);
@@ -55,8 +55,8 @@ p.gameName{
 }
 .btnSTART {
 	position:absolute;
-	bottom:2%;
-	left:44%;
+	top:65%;
+	right:8%;
 	-moz-box-shadow: 1px 1px 0px 0px #8a2a21;
 	-webkit-box-shadow: 1px 1px 0px 0px #8a2a21;
 	box-shadow: 1px 1px 0px 0px #8a2a21;
@@ -84,8 +84,8 @@ p.gameName{
 }
 .btnSTART:hover {
 	position:absolute;
-	bottom:2%;
-	left:44%;
+	top:65%;
+	right:8%;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #ff1500));
 	background:-moz-linear-gradient(top, #f24437 5%, #ff1500 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #ff1500 100%);
@@ -97,13 +97,13 @@ p.gameName{
 }
 .btnSTART:active {
 	position:absolute;
-	bottom:2%;
-	left:44%;
+	top:65%;
+	right:8%;
 }
 .btnRESET {
 	position:absolute;
-	left:41%;
-	bottom:2%;
+	top:75%;
+	right:5%;
 	-moz-box-shadow: 1px 1px 0px 0px #8a2a21;
 	-webkit-box-shadow: 1px 1px 0px 0px #8a2a21;
 	box-shadow: 1px 1px 0px 0px #8a2a21;
@@ -131,8 +131,8 @@ p.gameName{
 }
 .btnRESET:hover {
 	position:absolute;
-	left:41%;
-	bottom:2%;
+	top:75%;
+	right:5%;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #ff1500));
 	background:-moz-linear-gradient(top, #f24437 5%, #ff1500 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #ff1500 100%);
@@ -144,6 +144,6 @@ p.gameName{
 }
 .btnRESET:active {
 	position:absolute;
-	left:41%;
-	bottom:2%;
+	top:75%;
+	right:5%;
 }
